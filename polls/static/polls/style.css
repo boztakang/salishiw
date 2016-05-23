@@ -1,7 +1,20 @@
 body {
-    background: white url("images/storm.jpg") no-repeat right bottom;
+    background: green url("../images/storm.jpg") no-repeat left top;
 }
 
+h1 {
+    color: white;
+}
+li {
+    color: white;
+}
 li a {
-    color: green;
+    color: white;
+}
+
+#home_link {
+    color: white;   
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
