@@ -1,3 +1,6 @@
+{% extends "salishiw/base.html" %}
+
+{% block content %}
 <h1>{{ question.question_text }}</h1>
 
 <ul>
@@ -8,3 +11,4 @@
 
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a><br/>
 <a href="{% url 'polls:index' %}">More Polls</a>
+{% endblock %}

@@ -1,6 +1,7 @@
-{% load staticfiles %}
+{% extends "salishiw/base.html" %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'salishiw/style.css' %}" />
+{% block content %}
+{% load staticfiles %}
 <h1>Salish Irish Wolfhounds</h1>
 <table border="3px">
     <tr><td item-width="25%">
@@ -10,3 +11,4 @@
         <td width="75%"><img src="{% static 'images/storm.jpg' %}" width=100%/></td>
     </tr>
 </table>
+{% endblock content%}

@@ -1,0 +1,11 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'salishiw/style.css' %}" />
+<html>
+<body>
+{% include "salishiw/header.html" %}
+{% block content %}
+{% endblock content %}
+<p/>
+{% include "salishiw/footer.html" %}
+</body>
+</html>

@@ -1,6 +1,6 @@
-{% load staticfiles %}
+{% extends "salishiw/base.html" %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+{% block content %}
 <h1>Available Polls</h1>
 {% if latest_question_list %}
     <ul>
@@ -11,4 +11,4 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
-<a href="/" id="home_link">Home</a>
+{% endblock %}

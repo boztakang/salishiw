@@ -11,6 +11,9 @@ li {
 li a {
     color: white;
 }
+label {
+    color: white;
+}
 
 #home_link {
     color: white;   

@@ -1,0 +1,10 @@
+<header>
+<a href="/" id="header_home">Home</a>
+<span id="header_message">Header Bar </span>
+<span id="header_userinfo">
+    {% if user.is_authenticated %} welcome, <b>{{ user }}</b> 
+        <a href="admin/logout">logout</a> 
+    {% else %}<a href="admin/login/?next={{ request.path }}">login</a>
+    {% endif %}
+</span>
+</header>
