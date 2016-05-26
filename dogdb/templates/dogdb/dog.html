@@ -1,0 +1,15 @@
+{% extends "salishiw/base.html" %}
+
+{% block content %}
+<h1>{{ dog.registered_name }}</h1>
+<table border="3px">
+    <tr>
+        <td><img src="{{ dog.picture.url }}" width=100%/></td>
+    </tr>
+    <tr>
+        <td>
+            {{ dog.registration_number }}
+        </td>
+    </tr>
+</table>
+{% endblock content%}

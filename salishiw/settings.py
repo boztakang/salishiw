@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'dogdb.apps.DogdbConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -115,7 +116,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
@@ -126,3 +126,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
 STATIC_PATH,
 )
+
+# Uploaded Images
+
+MEDIA_ROOT = os.path.join(STATIC_PATH,"images")
+
+MEDIA_URL = '/static/images/'

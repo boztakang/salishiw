@@ -1,0 +1,14 @@
+{% extends "salishiw/base.html" %}
+
+{% block content %}
+<h1>Dogs</h1>
+{% if dogs_list %}
+    <ul>
+    {% for dog in dogs_list %}
+        <li><a href="{% url 'dogdb:dog' dog.id %}">{{ dog.registered_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No dogs are available.</p>
+{% endif %}
+{% endblock %}
