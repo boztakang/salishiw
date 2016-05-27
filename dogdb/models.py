@@ -8,6 +8,7 @@ from django.db import models
 # Create your models here.
 class Dog(models.Model):
     registered_name = models.CharField(max_length=200)
+    call_name = models.CharField(max_length=200)
     registration_number = models.BigIntegerField()
     sex = models.CharField(max_length=1, choices= (("M", "Male"),("F","Female")) )
     date_of_birth = models.DateField('date of birth')
@@ -17,11 +18,11 @@ class Dog(models.Model):
         return self.registered_name
         
 
-class CallName(models.Model):
+class NickNames(models.Model):
     dog = models.ForeignKey(Dog, on_delete=models.CASCADE)
-    call_name = models.CharField(max_length=200)
+    nick_name = models.CharField(max_length=200)
     
     def __str__(self):
-        return self.call_name
+        return self.nick_name
         
         

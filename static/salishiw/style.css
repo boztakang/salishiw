@@ -23,6 +23,13 @@ h1 {
     text-align: center;
 }
 
+section
+{
+    padding:5%;
+    border: 3px solid black;
+    margin-top:5px;
+}
+
 footer {
     background: darkgreen;
 }

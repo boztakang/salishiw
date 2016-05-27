@@ -2,14 +2,12 @@
 
 {% block content %}
 <h1>{{ dog.registered_name }}</h1>
-<table border="3px">
-    <tr>
-        <td><img src="{{ dog.picture.url }}" width=100%/></td>
-    </tr>
-    <tr>
-        <td>
-            {{ dog.registration_number }}
-        </td>
-    </tr>
-</table>
+<section>
+    <img src="{{ dog.picture.url }}" width=100%/><br/>
+    <h2>{{ dog.call_name}}</h2>
+    aka: {% for name in dog.nicknames_set.all %} "{{name}}" {% endfor %}<br/>
+    AKC Registration #: {{ dog.registration_number }} </br>
+    Sex: {{dog.sex}}
+</section>
+
 {% endblock content%}

@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from django.views import generic
 from django.utils import timezone
 
-from .models import Dog, CallName
+from .models import Dog, NickNames
 
 
 class IndexView(generic.ListView):
