@@ -9,13 +9,13 @@ from django.db import models
 class Dog(models.Model):
     registered_name = models.CharField(max_length=200)
     call_name = models.CharField(max_length=200)
-    registration_number = models.BigIntegerField()
+    registration_number = models.CharField(max_length=20)
     sex = models.CharField(max_length=1, choices= (("M", "Male"),("F","Female")) )
     date_of_birth = models.DateField('date of birth')
     picture = models.ImageField()
     
     def __str__(self):
-        return self.registered_name
+        return self.call_name
         
 
 class NickNames(models.Model):
